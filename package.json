@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "auto-reload-brunch": "^2.7.1",
+    "autoprefixer": "^6.5.3",
+    "brunch": "2.8",
+    "brunch-typescript": "^2.0.1",
+    "postcss-brunch": "0.5",
+    "sass-brunch": "^2.7.0"
+  },
+  "scripts": {
+    "watch": "brunch watch -s",
+    "build": "brunch build --production"
+  }
+}
