@@ -1,5 +1,132 @@
-$color: red;
+* {
+  // border: 1px solid red;
+  box-sizing: border-box;
+}
+
 body {
-  background: $color;
-  user-select: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Julius Sans One', sans-serif;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-bottom: 4px solid #7d97ad;
+  margin-bottom: 20px;
+}
+
+.logo-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 30px 0 10px;
+}
+
+.name-title {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-size: 38px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.title {
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.hero {
+  margin-bottom: 30px;
+}
+
+
+.projects-container {
+  padding: 0 20px;
+}
+
+.projects-list {
+  // max-width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.projects-title {
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.project {
+  border: 1px solid #bbb;
+  // text-align: center;
+}
+
+.project-card {
+  border: 1px solid blue;
+  max-width: 350px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.project-img {
+  max-width: 100%;
+  margin: 0;
+}
+
+
+
+footer {
+  border-top: 1px solid #bbb;
+}
+
+@media screen and (min-width: 600px) {
+  .projects-list {
+      flex-flow: row wrap;
+      // justify-content: space-around;
+  }
+
+  .project {
+      width: calc(50% - 10px);
+  }
+
+}
+
+@media screen and (min-width: 850px) {
+  .projects-list {
+      flex-flow: row wrap;
+      // justify-content: space-around;
+  }
+
+  .project {
+      width: calc(33.3333%);
+  }
+
+}
+
+
+@media screen and (min-width: 1100px) {
+  .header,
+  .hero,
+  .projects-container,
+  .footer {
+    margin: 0 auto;
+    width: 1100px;
+  }
+
 }
