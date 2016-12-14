@@ -1,10 +1,10 @@
 * {
-  // border: 1px solid red;
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Raleway', sans-serif;
+  font-weight: 300;
   color: #968e6f;
 }
 
@@ -20,11 +20,25 @@ img {
   max-width: 100%;
 }
 
+p {
+  margin: 0;
+}
+
+a.github-link {
+  font-weight: 400;
+  color: #2e965d;
+  text-decoration: none;
+}
+
+a.github-link:hover {
+  text-decoration: underline;
+}
+
 .header {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  border-bottom: 4px solid #7d97ad;
+  border-bottom: 4px solid #529671;
   margin-bottom: 20px;
 }
 
@@ -51,10 +65,11 @@ img {
   margin-bottom: 30px;
 }
 
-
+.projects-container {
+  margin-bottom: 20px;
+}
 
 .projects-list {
-  // max-width: 100%;
   display: flex;
   flex-flow: column wrap;
 }
@@ -64,16 +79,21 @@ img {
 }
 
 .project {
-  border: 1px solid #bbb;
+  // border: 1px solid #bbb;
   // text-align: center;
 }
 
 .project-card {
-  border: 1px solid blue;
-  max-width: 350px;
+  border: 1px solid #c0c0c0;
+  box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.12);
+  max-width: 380px;
   text-align: center;
-  height: 380px;
   margin: 0 auto;
+}
+
+.project-name {
+  font-size: 22px;
+  padding: 10px 0;
 }
 
 .project-img {
@@ -81,12 +101,27 @@ img {
   margin: 0;
 }
 
-
-
-footer {
-  border-top: 1px solid #bbb;
+.project-description {
+  font-size: 17px;
+  padding: 0 10px;
+  line-height: 1.4;
 }
 
+.project-link {
+  font-size: 17px;
+  padding: 20px 0;
+}
+
+.footer {
+  border-top: 1px solid #bbb;
+  padding: 6px 0 20px;
+  text-align: center;
+}
+
+
+/**************************************************
+ * Viewport - 1 Column
+ **************************************************/
 
 @media screen and (max-width: 599px) {
   .header {
@@ -111,7 +146,7 @@ footer {
   }
 
   .projects-container {
-    padding: 0 10px;
+    padding: 0 16px;
   }
 
   .project {
@@ -122,9 +157,30 @@ footer {
     font-size: 22px;
   }
 
+  .project-card {
+    min-height: 380px;
+  }
 
+  .project-link {
+    font-size: 17px;
+  }
 
 }
+
+@media screen and (min-width: 480px) and (max-width: 599px) {
+  .project {
+    padding-bottom: 16px;
+  }
+
+  .projects-title {
+    font-size: 26px;
+  }
+
+}
+
+/**************************************************
+ * Viewport 600px - 2 Columns
+ **************************************************/
 
 @media screen and (min-width: 600px){
   .header {
@@ -159,11 +215,14 @@ footer {
     font-size: 28px;
   }
 
-}
-
-@media screen and (min-width: 600px) and (max-width: 849px){
   .project {
     width: calc(50%);
+  }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 739px) {
+  .project {
     padding-bottom: 10px;
   }
 
@@ -175,9 +234,41 @@ footer {
     padding-left: 5px;
   }
 
+  .project-card {
+    min-height: 360px;
+  }
+
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 740px) and (max-width: 869px) {
+  .project {
+    padding-bottom: 16px;
+  }
+
+  .project:nth-child(odd) {
+    padding-right: 8px;
+  }
+
+  .project:nth-child(even) {
+    padding-left: 8px;
+  }
+
+  .project-card {
+    height: 400px;
+  }
+
+  .project-description,
+  .project-link {
+    font-size: 18px;
+  }
+
+}
+
+/**************************************************
+ * Viewport 870px - 3 Columns
+ **************************************************/
+
+@media screen and (min-width: 870px) {
   .name {
     font-size: 44px;
   }
@@ -192,6 +283,9 @@ footer {
 
 }
 
+/**************************************************
+ * Viewport 1100px - 3 Columns and Fixed width
+ **************************************************/
 
 @media screen and (min-width: 1100px) {
   .container {
@@ -222,6 +316,19 @@ footer {
 
   .projects-title {
     font-size: 36px;
+  }
+
+  .project-card {
+    height: 400px;
+  }
+
+  .project-name {
+    font-size: 24px;
+  }
+
+  .project-description,
+  .project-link {
+    font-size: 18px;
   }
 
 }
