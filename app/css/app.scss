@@ -5,7 +5,7 @@
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  color: #968e6f;
+  color: #80774c;
 }
 
 h1,
@@ -26,7 +26,7 @@ p {
 
 a.github-link {
   font-weight: 400;
-  color: #2e965d;
+  color: #008a45;
   text-decoration: none;
 }
 
@@ -116,6 +116,15 @@ a.github-link:hover {
   border-top: 1px solid #bbb;
   padding: 6px 0 20px;
   text-align: center;
+}
+
+.credits {
+  font-size: 14px;
+  padding-top: 6px;
+}
+
+.credits a {
+  color: #80774c;
 }
 
 
