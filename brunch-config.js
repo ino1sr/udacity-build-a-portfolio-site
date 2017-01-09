@@ -27,7 +27,7 @@ exports.config = {
     ],
 
     // Where to compile files to
-    public: "_build"
+    public: "docs"
   },
 
   plugins: {
