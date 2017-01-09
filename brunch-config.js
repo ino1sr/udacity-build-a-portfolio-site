@@ -5,7 +5,10 @@ exports.config = {
       joinTo: "js/app.js"
     },
     stylesheets: {
-      joinTo: "css/app.css"
+      joinTo: "css/app.css",
+      order: {
+        before: /normalize/
+      }
     },
     templates: {
       joinTo: "js/app.js"
